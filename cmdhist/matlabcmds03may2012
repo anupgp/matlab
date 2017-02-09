@@ -1,0 +1,5 @@
+set(0,'defaultfigureposition',[334 206 518 332]) # sets the default figure size in LBWH format
+figure('position',[334 206 518 332]) # sets position of the fig temporarily 
+get(0,'ScreenSize') # prints the screen size
+Clear command line: CTRL-u
+set(0,'format','shortG')

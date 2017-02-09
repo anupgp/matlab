@@ -1,0 +1,8 @@
+% Time-stamp: <2016-02-14 10:52:42 anup>
+% GET_IRI_RRI_FROMFILES This function will produce a single
+% matrix containing histogram of inter-release-intervals (IRI) and
+% relative-release-intervals (RRI) from files. 
+% Format of the input-file: COl1: Time, COL2: release-inducing
+% stimulus, COL3: releases
+%
+% Usage: get_iri_rri_fromfiles(fname,start_index,stop_index,colnames) 

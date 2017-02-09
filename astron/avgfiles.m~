@@ -1,0 +1,36 @@
+% Time-stamp: <2016-02-11 16:41:32 anup>
+% APPLYFUN2FILES Function will apply the provided function (via
+% fun_handle) on each row of the matrix from multiple files and
+% will return a single matrix with the same dimension as the matrix
+% from a single file
+%
+% Usage: applyfun2files(fname,start_index,stop_index,fun_hand)
+function outmat = applyfun2files(fname,start_index,stop_index)
+% seperate path and filename from fname_prefix
+    slash_indices = strfind(fname,'/');
+    path_name = fname(1:slash_indices(end));
+    fname2 = fname(slash_indices(end)+1:end);
+    % seperate file extension from filename 
+    extn_name = fname2(strfind(fname2,'.'):end);
+    file_name = fname2(1:strfind(fname2,'.')-1);
+    fprintf(['Path = ', path_name,'\n']);
+    fprintf(['Filename = ', file_name,'\n']);
+    fprintf(['Extn = ', extn_name,'\n']);
+    count =1;
+    for i = start_index : stop_index
+        % Load one file at a time
+        dfname = [path_name,file_name,num2str(i),extn_name];
+        fprintf(['Reading file: %s\n',dfname]);
+        [d,~] = swallow_csv(dfname,'"',',','\');
+        col_names=textscan(fopen(dfname),'%s',1);fclose('all');
+        col_names = char(col_names{:});col_names = strsplit(col_names,',');
+        
+        if(i == start_index)
+            t_id = find(~cellfun(@isempty,strfind(colnames,'time')))
+            tstep = d(2,t_id)-d(1,t_id);
+            tot
+        end
+        spon_res_temp = d(:,strcmp(col_names,'n0gluves_spon_flag') == 1);
+        % Calculate spon_res for spon_res_duration
+
+end

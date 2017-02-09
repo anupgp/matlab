@@ -1,0 +1,37 @@
+offsets= max(blhp((at>0.04 & at <0.045),:));
+finals = mean(blhp((at>0 & at <0.040),:));
+ahp3 = blhp((at>0.04),3);
+ ahpt3 = at((at>0.04));
+ pw = ahpt3(end)-ahpt3(1);
+ r_in = x(3);
+ tau = x(2);
+ r_sr = x(1);
+ i_inj = (finals(3)-offsets(3))/(r_in+r_sr);
+ [tf3 f3] = vp_passive_charge(20E-06,ahpt3(1),0,pw,offsets(3),i_inj/10000,r_sr,r_in,tau);
+sigma = 15;
+size = 50;
+v2c=v2(t>=t(v2==min(v2)));
+tc=t(t>=t(v2==min(v2)));
+
+%chop the AHP trace from the whole
+%chop the decay data AHP tarce
+% fit to the decay of AHP
+% measurements
+
+%-----------------------------
+% plot(yt,y,'black',yst,ys,'red','lineWidth',2);
+% figure;
+% [AX,H1,H2] = plotyy(yt,y,yt,ss);
+% set(H1,'color','black');
+% set(get(AX(1),'Ylabel'),'String','Orginal trace'); 
+% set(get(AX(1),'Ylabel'),'color','black'); 
+% set(AX(1),'YLim',[-0.1, -0.04]);
+%-------------------------------
+% set(H2,'color','red');
+% set(get(AX(2),'Ylabel'),'String','Subtracted trace');
+% set(get(AX(2),'Ylabel'),'color','red'); 
+% set(AX(2),'YLim',[-0.1, -0.04]);
+% axis([0.4247   0.5886   -0.0719   -0.0604]);
+%------------------------------
+    fprintf('length of y = %d, ys = %d\n',length(y),length(ys));
+%extract: vo=vi-vsx

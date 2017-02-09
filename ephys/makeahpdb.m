@@ -1,0 +1,9 @@
+% contruct the AHP data database
+function db = makeahpdb(n)
+fields = struct('fname','','t_no',0,'gname','','r_in',0,'r_se',0,'ctau',0,'vrest',0,'i_hyp',0,...
+    'raw_peak',0,'raw_peak_lat',0,'raw_area_tot',0,'delay',0,'raw_peak_delay',0,...
+    'raw_area_delay',0,'sub_peak',0,'sub_peak_lat',0,'sub_area_tot',0,'sub_peak_delay',0,...
+    'sub_area_delay',0,'tau_f',0,'tau_s',0,'sse_pas',0,'sse_act',0);
+db(1:n,1) = fields;
+% load('~/AHP_HC/CC_AHP_06062012.dat','-mat')
+% save('~/AHP_HC/CC_AHP_06062012.dat','CC','-mat')

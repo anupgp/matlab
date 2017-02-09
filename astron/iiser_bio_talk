@@ -1,0 +1,19 @@
+%%
+close all;
+%hold on;
+%clear all;
+set(0,'DefaultFigureWindowStyle','docked')
+%dd = load('test_det_model_calbindin_run');
+set(gca,'FontSize',20);
+%plot((dd(:,1)),(dd(:,2)),'Color','blue','Marker','o','MarkerSize',7);
+%plot(dd(:,1),(dd(:,2) ),'Color','red'); hold on;
+plot(log10(d(:,3)),d(:,7),'Color','blue');
+box off;
+grid on;
+%plot((dd(:,1)),(dd(:,2)),'Color','blue');
+axis([-8,-2,0,0.3]);
+title(sprintf('Testing Ryanodine receptor'),'Fontsize',16);
+xlabel(sprintf('log_1_0[Ca_c_y_t^2^+]','Fontsize',18));
+%xlabel('log_1_0[Ca_e_r^2^+] \muM','Fontsize',18);
+ylabel('Open probability','Fontsize',18);
+%print(gcf,'-djpeg',['-r','100'],'/mnt/storage/goofy/DATA/IISER_Job/data/figures/Ryanodine_receptor_Saftenku_L1_model_2.jpeg');

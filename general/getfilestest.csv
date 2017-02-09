@@ -1,0 +1,4 @@
+#This is a master file that contains all the AHP cells from HC-CA1
+FileName,Select,Channel,BrainRegion,GroupName,ExpDate,BirthDate,TreatTime,RecTime,VRest,PsvBT1,PsvBT2,PsvRT2,CmdStepPsv,AhpBT1,AhpBT2,AhpRT1,AhpRT2,CmdStepAhp,ScaleFactor,Sweeps
+/home/goofy/DATA/AHP/AHP_HC/Data/AHPs/AUG122011_C2_CC.abf,1,10 Vm,HC-CA1,CTRL+ CORT,20110812,20110529,1140,1450,-67.7,0.01,0.175,0.375,-20E-012,0.575,0.675,1.276,9,25,10,[, 9,  10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,]
+

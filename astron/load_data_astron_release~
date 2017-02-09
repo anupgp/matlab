@@ -1,0 +1,4 @@
+% Function to read n files in steps and save specific columns in matrices
+% arguments:   filenameprefix, 
+%              startindex, 
+%              stepsize (depends on num of parallel jobs possible : 8 )

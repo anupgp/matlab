@@ -1,0 +1,12 @@
+# Data files in all folders
+*.fig
+*.mat
+
+# All files in the data folder
+data/*
+
+# All files in the private folder
+private/*
+
+# All files in the working folder
+working/*

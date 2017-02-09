@@ -1,0 +1,8 @@
+userpath('/home/goofy/MATLAB')
+set(0,'DefaultFigureWindowStyle','docked')# dockes figures in current session
+set(0,'DefaultFigureWindowStyle','normal')# set things back to normal
+savepath /home/goofy/MATLAB/pathdef_restore.m
+path(saved_path)
+rmpath([matlabroot '\toolbox\symbolic'])
+addpath([matlabroot '\toolbox\symbolic'])
+set(0,'defaultfigureposition',[426   267   514   468]) # [left bottom width height] in pixels

@@ -1,0 +1,39 @@
+close all;
+% data
+xvar = var1max;
+yvar = nspkall(1,:);
+% display settings
+set(0,'DefaultFigureWindowStyle','docked');
+% print settings
+set(gca,'Units','pixels');
+set(gca,'OuterPosition', get(gca,'OuterPosition') + [40,35,25,60]); % [left bottom width height]
+set(gca,'Position', get(gca,'Position') + [0,0,50,0]);
+
+ah1 = gca;
+hold(ah1,'on');
+fh1 = plot(ah1,xvar,yvar,'color',[0 0 0],'LineWidth',1,'LineStyle','o');
+set(fh1,'LineWidth',3,'Color',[0 0 1],'Linestyle','-');
+%fh2 = plot(ah1,xvarmax*1e09,yvar1instfreq,'color',[0 0 0],'LineWidth',2);
+set(fh2,'LineWidth',3,'Color',[1 0 0],'Linestyle','-');
+set(ah1,'XLim',[0,2000]);
+set(ah1,'XTick',0:500:2000);
+set(ah1,'YLim',[0,0.2]);
+set(ah1,'YTick',0:0.05:0.2);
+set(ah1,'LineWidth',2,'Color','none','Linestyle','-');
+set(ah1,'TickDir','out');
+set(ah1,'FontSize',18);
+set(ah1,'XColor','k');
+box(ah1,'off');
+ylabel(ah1,sprintf(' Frequency (Hz)'),'Fontsize',18);
+xlabel(ah1,sprintf('\n\nIP_3 concentration (nM)'),'Fontsize',18);
+title(ah1,sprintf('Astrocyte Ca_{cyt}^{2+} oscillations'),'FontSize',20);
+[hleg1, hobj1] = legend(ah1,'Average','Instantaneous','Location','NorthEast');
+set(hleg1,'box','off');
+textobj = findobj(hobj1, 'type', 'text');
+set(textobj, 'Interpreter', 'tex', 'FontSize', 18);
+htb = annotation('textbox',[0.16 0.73 0.4 .15]); % [x y w h]
+set(htb,'string',sprintf('N_{ip3rlr} = 1m, Ca_{er}^{2+} = 250 \\muM, er_{leak} = 0.02\n\nflux_{ip3rlr} = 1.2, flux_{serca} = 2\\muM'),'FontSize',12);
+set(htb,'FitBoxToText','off');
+set(htb,'LineStyle','none');
+set(htb,'FitHeightToText','off');
+%print(gcf,'-djpeg',['-r','300'],'/home/anup/goofy/projects/data/astron/figures/ip3rlr/astrocyte5_erca250_n1m_cacyt_freq.jpeg');

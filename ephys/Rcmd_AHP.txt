@@ -1,0 +1,202 @@
+getwd()
+setwd("~/goofy/DATA/")
+setwd("~/DATA/")
+files.list()
+list.files()
+setwd("/R")
+setwd("getwd()+/R")
+print(getwd())
+print(getwd()+getwd())
+print(cat(getwd(),getwd()))
+setwd(cat(getwd(),"/R"))
+cat(getwd(),"/R")
+cat(getwd(),"/R","")
+"a"+"v"
+setwd("~/DATA/R")
+
+setwd("~/DATA/R/R_scripts")
+open("Lowpassfilter.R")
+load("Lowpassfilter.R")
+source("Lowpassfilter.R")
+open(gkernal)
+gkernal
+g = gkernal(1000)
+g
+x = -500:1:500
+x
+plot(x,g)
+plot(x,g,'x','y')
+?plot
+dim(x)
+dim(g)
+?size
+?length
+plot(g)
+plot(g,x)
+?dim
+s
+ncol(x)
+g = gkernal(500)
+g = g[1:1000]
+source("~/DATA/R/R_scripts/Clampex.R")
+y = abfload("AUG092011_C3_CV.abf","/home/goofy/AHP_HC/","10 Vm")
+y = abfload("AUG092011_C3_CV.abf","/home/goofy/AHP_HC/data/","10 Vm")
+y = abfload("AUG092011_C3_CV.abf","/home/goofy/AHP_HC/Data/","10 Vm")
+dim(y)
+yy=y
+y = y[:,15]
+y = y[,15]
+plot(y)
+rm(yy)
+size(y)
+length(y)
+t = 0:20E-06:(lenght(y)-1)*20E-06
+t = 0:20E-06:(length(y)-1)*20E-06
+plot(t,y)
+line(t,y)
+plot(t,y,"l")
+?SMS
+?SMA
+library()
+apropos("SMA")
+help("SMA")
+??SMA
+SMA
+packages()
+package(SMA)
+package("SMA")
+library("SMA")
+library("TTR")
+list.packages()
+package.lits()
+package.list()
+packages.list()
+list.package()
+listpackage()
+apropos("pakage")
+apropos("package")
+find.package("TTR")
+instalpackahes("TTR")
+instalpackages("TTR")
+installpackages("TTR")
+install.packages("TTR")
+install.packages("TTR","NL")
+install.packages("TTR","Utrecht")
+install.packages("TTR","Netherlands")
+TTR
+help TTR
+help SMA
+?? SMA
+y1 = SMA(y,25)
+load.package(TTR)
+load.packages(TTR)
+apropos("load")
+package.contents("TTR")
+package.contents("zoo")
+is.installed("TTR")
+is.Installed("TTR")
+installed.packages()
+clear
+cls
+? "SMA"
+y1[is.na(y1)] = y[is.na(y1)]
+ts1 = ts(y1,start=0,deltat=20E-06)
+plot(ts1)
+y2 = filter(y1,gkernal(500))
+plot(y2)
+y2[is.na(y2)] = y1[is.na(y2)]
+ts2 = ts(y2,start=0,deltat=20E-06)
+plot(ts2)
+plot(ts1,ts2)
+? plot
+plot(ts2,'red')
+length(ts1)
+lenght(ts2)
+length(ts2)
+line(ts1)
+lines(ts1)
+plot(ts2,col="red")
+lines(ts1,col="blue")
+plot(ts1,col="blue")
+lines(ts2,col="red")
+lines(ts2,col="red",ylim=[-800,-600])
+lines(ts2,col="red",ylim=(-800,-600))
+lines(ts2,col="red",ylim=c(-800,-600))
+plot(ts1,col="blue",ylim = c(-800,-600))
+plot(ts1,col="blue",ylim = c(-800,-600),xlim=c(0,2))
+y3  = SMA(y2,11)
+plot(y3)
+is.na(y2)
+y3 = SMA(ts2,11)
+is.na(y3)
+is.na(y3(1:100)
+)
+is.na(y3[1:100])
+y3[is.na(y3)] = ts2[is.na(y3)]
+ts3 = ts(y3,start=0,deltat=20E-06)
+plot(ts1,col="blue",xlim=c(0,2),ylim=c(-800,-600))
+lines(ts3,col="black")
+length(ts3)
+length(y1)
+length(y2)
+length(y3)
+x11()
+plot(window(ts3,0,0.165))
+t31 = t3-mean(window(ts3,0,0.165))
+ts31 = ts3-mean(window(ts3,0,0.165))
+plot(ts31)
+plot(window(ts31,1.28,1.46))
+history("source")
+history("source",max.show=10)
+history("source",ahow.max=10)
+history("source",show.max=10)
+history(max.show=10,"source")
+history(max.show=10,"*source*")
+? history
+history(pattern="source")
+source("~/DATA/R/R_scripts/peakalgo.R")
+mahppeaks = peaks(window(ts31,1.28,1.46),5)
+min(window(ts31,1.28,1.46))
+max(window(ts31,1.28,1.46))
+mahppeaks[1,4]
+size(mahppeaks)
+dim(mahppeaks)
+mahppeaks[1,1]
+mahppeaks[1,2]
+mahppeaks[1,3]
+curr.dev()
+curr.devs()
+list.devs()
+list.dev()
+dev.list()
+dev.curr()
+dev.cur()
+plot(mahppeaks[1,3]+1.28,mahppeaks[1,4],col="red",size=2)
+plot(mahppeaks[1,3]+1.28,mahppeaks[1,4],col="red")
+lines(mahppeaks[1,3]+1.28,mahppeaks[1,4],col="red")
+mahppeak[1,4]
+mahppeaks[1,4]+1
+? lines
+lines(mahppeaks[1,3]+1.28,mahppeaks[1,4],col="red",lwd=3)
+lines(mahppeaks[1,3]+1.28,mahppeaks[1,4],col="red",lwd=30)
+points(mahppeaks[1,3]+1.28,mahppeaks[1,4],col="red",lwd=30)
+points(mahppeaks[1,3]+1.28,mahppeaks[1,4],col="red",lwd=5)
+points(mahppeaks[1,3]+1.28,mahppeaks[1,4],col="blue",lwd=5)
+mahppeaks[1,4]<0
+mahppeaks[1,4]>0
+mahppeaks[1,4]>0 *2
+(mahppeaks[1,4]>0) *2
+(mahppeaks[1,4]<0) *2
+rm(ls=list(""))
+rm(list=ls())
+history(pattern="",max.show=100)
+history(pattern="",max.show=200)
+RcmdAHP <- history(pattern="",max.show=200)
+la()
+View(RcmdAHP)
+view(RcmdAHP)
+edit(RcmdAHP)
+rm(RcmdAHP)
+cat Rcmds_AHP < history(pattern="",max.show=200)
+edit(history(pattern="",max.show=200))
+

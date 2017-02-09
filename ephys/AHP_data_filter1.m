@@ -1,0 +1,13 @@
+specs = 'Fp,Fst,Ap,Ast';
+h = fdesign.lowpass(specs);
+Fpass = 1000;
+Fstop = 1500;
+Apass = 0.5;
+Astop = 60;
+Fs = 50E03;
+setspecs(h,specs,Fpass,Fstop,Apass,Astop,Fs);
+%deisgnmethods(h,'full');
+filt=design(h,'kaiserwin');
+y = filter(filt,x);
+plot(t,y,t,x);
+axis([0.6749    0.6810 -831.7025 -304.7407]);
