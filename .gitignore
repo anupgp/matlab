@@ -2,11 +2,11 @@
 *.fig
 *.mat
 
-# Ignore all files in the data folder
-data/*
+# Ignore data folder
+data/
 
-# Ignore all files in the private folder
-private/*
+# Ignore private folder
+private/
 
-# Ignore all files in the working folder
-working/*
+# Ignore working folder
+working/
