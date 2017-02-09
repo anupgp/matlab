@@ -10,3 +10,6 @@ private/
 
 # Ignore working folder
 working/
+
+# Ignore files ending with ~
+*~
